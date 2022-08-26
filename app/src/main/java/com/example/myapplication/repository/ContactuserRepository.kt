@@ -23,10 +23,4 @@ suspend fun deleteAllContacts(){
     contactuserDao.deleteAllContacts()
 }
 
-
-
-
-
-
-
 }
