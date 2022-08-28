@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase
 @Database(entities = [ContactUser::class],version =1,exportSchema = false )
 abstract class ContactuserDatabase :RoomDatabase() {
 
-    abstract fun contactuserDao():ContactuserDao
+    abstract fun contactuserDao():ContactUserDao
     companion object{
         @Volatile
         private var INSTANCE:ContactuserDatabase ? = null

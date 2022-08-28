@@ -1,10 +1,10 @@
 package com.example.myapplication.repository
 
 import androidx.lifecycle.LiveData
-import com.example.myapplication.data.ContactuserDao
+import com.example.myapplication.data.ContactUserDao
 import com.example.myapplication.data.ContactUser
 
-class ContactuserRepository (private val contactuserDao: ContactuserDao){
+class ContactuserRepository (private val contactuserDao: ContactUserDao){
 val readallData :LiveData<List<ContactUser>> =contactuserDao.readAllData()
 
 suspend fun addContactuser(contactuser: ContactUser){

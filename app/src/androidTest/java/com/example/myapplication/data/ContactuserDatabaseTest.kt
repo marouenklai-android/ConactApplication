@@ -24,7 +24,7 @@ class ContactUserDatabaseTest{
     @get:Rule
     var instantTaskExecutorRule = InstantTaskExecutorRule()
 
-    private lateinit var userDao: ContactuserDao
+    private lateinit var userDao: ContactUserDao
     private lateinit var db: ContactuserDatabase
 
     @Before
