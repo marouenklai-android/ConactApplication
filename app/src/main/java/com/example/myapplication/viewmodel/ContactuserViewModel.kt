@@ -5,13 +5,13 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.example.myapplication.data.ContactuserDatabase
-import com.example.myapplication.data.ContactUser
+import com.example.myapplication.data.Contactuser
 import com.example.myapplication.repository.ContactuserRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class ContactuserViewModel(application: Application):AndroidViewModel (application){
-    val readAllData : LiveData<List<ContactUser>>
+    val readAllData : LiveData<List<Contactuser>>
 
     private val repository: ContactuserRepository
 
@@ -23,7 +23,7 @@ class ContactuserViewModel(application: Application):AndroidViewModel (applicati
     }
 
 
-    fun addContactuser(contactuser: ContactUser){
+    fun addContactuser(contactuser: Contactuser){
 
     viewModelScope.launch(Dispatchers.IO) {
         repository.addContactuser(contactuser)
@@ -32,14 +32,14 @@ class ContactuserViewModel(application: Application):AndroidViewModel (applicati
     }
 
 
-    fun updateContactuser(contactuser: ContactUser){
+    fun updateContactuser(contactuser: Contactuser){
 
     viewModelScope.launch(Dispatchers.IO) {
         repository.updateContactuser(contactuser)
     }
 
     }
-    fun deleteContactuser(contactuser: ContactUser){
+    fun deleteContactuser(contactuser: Contactuser){
         viewModelScope.launch(Dispatchers.IO){
             repository.deleteContactuser(contactuser)
         }

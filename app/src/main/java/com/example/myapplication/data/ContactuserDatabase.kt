@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 
-@Database(entities = [ContactUser::class],version =1,exportSchema = false )
+@Database(entities = [Contactuser::class],version =1,exportSchema = false )
 abstract class ContactuserDatabase :RoomDatabase() {
 
     abstract fun contactuserDao():ContactUserDao

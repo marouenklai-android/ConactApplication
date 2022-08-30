@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.myapplication.R
-import com.example.myapplication.data.ContactUser
+import com.example.myapplication.data.Contactuser
 import com.example.myapplication.viewmodel.ContactuserViewModel
 import kotlinx.android.synthetic.main.fragment_update.*
 import kotlinx.android.synthetic.main.fragment_update.view.*
@@ -56,7 +56,7 @@ private lateinit var mContactuserViewModel: ContactuserViewModel
         if(inputCheck(firstName ,lastName ,numero)){
 
             // Create Contactuser object
-            val updatedContactuser = ContactUser(args.currentContact.id,firstName,lastName,numero )
+            val updatedContactuser = Contactuser(args.currentContact.id,firstName,lastName,numero )
 
 
             // Update Current Contact user

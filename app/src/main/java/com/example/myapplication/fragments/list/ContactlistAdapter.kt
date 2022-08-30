@@ -6,13 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.example.myapplication.R
-import com.example.myapplication.data.ContactUser
+import com.example.myapplication.data.Contactuser
 import kotlinx.android.synthetic.main.contact_row.view.*
 
 class ContactlistAdapter: RecyclerView.Adapter<ContactlistAdapter.MyViewHolder>() {
 
 
-    private var contactList= emptyList<ContactUser>()
+    private var contactList= emptyList<Contactuser>()
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
 
@@ -29,7 +29,7 @@ class ContactlistAdapter: RecyclerView.Adapter<ContactlistAdapter.MyViewHolder>(
         holder.itemView.t3.text = currentItem.lastName
         //holder.itemView.phone.setText(currentItem.numero)
         //holder.itemView.editTextPhone.setText(currentItem.numero.toString())
-        holder.itemView.phone.text = currentItem.number.toString()
+        holder.itemView.phone.text = currentItem.numero.toString()
         holder.itemView.rowLayout.setOnClickListener{
 
             val action = listFragmentDirections.actionListFragmentToUpdateFragment(currentItem)
@@ -42,7 +42,7 @@ class ContactlistAdapter: RecyclerView.Adapter<ContactlistAdapter.MyViewHolder>(
     override fun getItemCount(): Int {
         return contactList.size
     }
-    fun setData(contactuser : List<ContactUser>){
+    fun setData(contactuser : List<Contactuser>){
        this.contactList = contactuser
        notifyDataSetChanged()
     }

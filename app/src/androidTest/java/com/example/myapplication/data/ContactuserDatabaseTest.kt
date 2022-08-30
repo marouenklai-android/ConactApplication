@@ -17,7 +17,7 @@ import org.junit.runner.RunWith
 import java.io.IOException
 
 @RunWith(AndroidJUnit4::class)
-class ContactUserDatabaseTest{
+class ContactuserDatabaseTest{
     // A JUnit Test Rule that swaps the background executor
     // used by the Architecture Components with a different one
     // which executes each task synchronously
@@ -44,7 +44,7 @@ class ContactUserDatabaseTest{
     @Test
     @Throws(Exception::class)
     fun writeUserAndReadInList()= runBlockingTest {
-        val contactuser = ContactUser(1, "mar", "tar", "123")
+        val contactuser = Contactuser(1, "mar", "tar", "123")
 
         userDao.addContactuser(contactuser)
         val allContact = userDao.readAllData().getOrAwaitValue()
